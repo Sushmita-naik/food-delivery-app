@@ -5,7 +5,7 @@ This project allows users to register, log in, browse restaurants, add food item
 
 ---
 
-## 🚀 Features
+# 🚀 Features
 
 - 👤 User Registration & Login system
 - 🔐 Forgot password page
@@ -19,7 +19,7 @@ This project allows users to register, log in, browse restaurants, add food item
 
 ---
 
-## 🛠️ Tech Stack
+# 🛠️ Tech Stack
 
 - Frontend: HTML, CSS
 - Backend: Python (Flask)

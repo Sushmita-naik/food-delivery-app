@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Food Menu</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<h1>Food Menu</h1>
+
+{% if food_items %}
+
+    {% for item in food_items %}
+
+    <div style="
+        background:white;
+        padding:20px;
+        margin:20px;
+        border-radius:10px;
+    ">
+
+        <h2>{{ item[2] }}</h2>
+
+        <h3>₹{{ item[3] }}</h3>
+
+        <p>{{ item[4] }}</p>
+
+        <a href="/add_to_cart/{{ item[0] }}">
+
+            <button>
+                Add To Cart
+            </button>
+
+        </a>
+
+    </div>
+
+    {% endfor %}
+
+{% else %}
+
+    <h2>No Food Items Found</h2>
+
+{% endif %}
+
+<br>
+
+<a href="/cart">
+
+    <button>
+        Go To Cart
+    </button>
+
+</a>
+
+</body>
+</html>

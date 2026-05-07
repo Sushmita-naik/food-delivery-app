@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Payment</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<h1>Payment Page</h1>
+
+<h2>Total Amount: ₹{{ total }}</h2>
+
+<form method="POST">
+
+    <h3>Select Payment Method</h3>
+
+    <input type="radio"
+           name="payment_method"
+           value="UPI"
+           required>
+
+    UPI
+
+    <br><br>
+
+    <input type="radio"
+           name="payment_method"
+           value="Cash On Delivery">
+
+    Cash On Delivery
+
+    <br><br>
+
+    <input type="radio"
+           name="payment_method"
+           value="Card">
+
+    Card
+
+    <br><br>
+
+    <button type="submit">
+
+        Confirm Payment
+
+    </button>
+
+</form>
+
+</body>
+</html>

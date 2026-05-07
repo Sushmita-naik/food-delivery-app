@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Restaurants</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<h1>Restaurants</h1>
+
+{% for restaurant in restaurants %}
+
+<div style="
+background:white;
+padding:20px;
+margin:20px;
+border-radius:10px;
+">
+
+    <h2>{{ restaurant[1] }}</h2>
+
+    <p>{{ restaurant[2] }}</p>
+
+    <p>{{ restaurant[3] }}</p>
+
+    <a href="/menu/{{ restaurant[0] }}">
+
+        <button>
+            Food Menu
+        </button>
+
+    </a>
+
+</div>
+
+{% endfor %}
+
+</body>
+</html>

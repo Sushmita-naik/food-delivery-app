@@ -1,0 +1,181 @@
+<!-- dashboard.html -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Dashboard</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<h1>🍔 Food Ordering System</h1>
+
+<!-- WELCOME -->
+
+<div style="
+background:white;
+padding:20px;
+border-radius:10px;
+margin-bottom:20px;
+">
+
+    <h2>Welcome User 👋</h2>
+
+    <p>
+        Order your favorite foods quickly and easily.
+    </p>
+
+</div>
+
+<!-- SEARCH -->
+
+<div style="
+background:white;
+padding:20px;
+border-radius:10px;
+margin-bottom:20px;
+">
+
+    <h2>Search Food</h2>
+
+    <form action="/search" method="GET">
+
+        <input type="text"
+               name="query"
+               placeholder="Search pizzas, burgers..."
+               style="
+               width:70%;
+               padding:10px;
+               border-radius:5px;
+               border:1px solid gray;
+               ">
+
+        <button type="submit">
+            Search
+        </button>
+
+    </form>
+
+</div>
+
+<!-- FOOD CATEGORIES -->
+
+<div style="
+background:white;
+padding:20px;
+border-radius:10px;
+margin-bottom:20px;
+">
+
+    <h2>Food Categories</h2>
+
+    <a href="/category/Pizza">
+        <button>Pizza</button>
+    </a>
+
+    <a href="/category/Burger">
+        <button>Burger</button>
+    </a>
+
+    <a href="/category/Biryani">
+        <button>Biryani</button>
+    </a>
+
+    <a href="/category/Chinese">
+        <button>Chinese</button>
+    </a>
+
+    <a href="/category/Dessert">
+        <button>Desserts</button>
+    </a>
+
+    <a href="/category/Drinks">
+        <button>Drinks</button>
+    </a>
+
+</div>
+
+<!-- SPECIAL OFFERS -->
+
+<div style="
+background:white;
+padding:20px;
+border-radius:10px;
+margin-bottom:20px;
+">
+
+    <h2>🔥 Special Offers</h2>
+
+    <p>50% OFF on Pizza Orders Above ₹500</p>
+
+    <p>Free Delivery On Weekend Orders</p>
+
+    <p>Buy 1 Get 1 Free On Burgers</p>
+
+</div>
+
+<!-- POPULAR RESTAURANTS -->
+
+<div style="
+background:white;
+padding:20px;
+border-radius:10px;
+margin-bottom:20px;
+">
+
+    <h2>⭐ Popular Restaurants</h2>
+
+    <ul>
+
+        <li>Pizza Palace</li>
+
+        <li>Burger Hub</li>
+
+        <li>Royal Biryani</li>
+
+        <li>Chinese Wok</li>
+
+        <li>Cafe Delight</li>
+
+    </ul>
+
+</div>
+
+<!-- NAVIGATION BUTTONS -->
+
+<a href="/restaurants">
+
+    <button>
+        View Restaurants
+    </button>
+
+</a>
+
+<br><br>
+
+<a href="/cart">
+
+    <button>
+        View Cart
+    </button>
+
+</a>
+
+<br><br>
+
+<a href="/logout">
+
+    <button>
+        Logout
+    </button>
+
+</a>
+
+</body>
+</html>

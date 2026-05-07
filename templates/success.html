@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Order Success</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<h1>Order Placed Successfully 🎉</h1>
+
+<h2>Payment Method: {{ method }}</h2>
+
+<br>
+
+<a href="/dashboard">
+
+    <button>
+        Back To Home
+    </button>
+
+</a>
+
+</body>
+</html>

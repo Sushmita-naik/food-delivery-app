@@ -3,22 +3,21 @@ import sqlite3
 
 app = Flask(__name__)
 
-# =========================
+
 # CART
-# =========================
+
 cart = []
 
-# =========================
+
 # HOME PAGE
-# =========================
+
 @app.route('/')
 def home():
 
     return redirect('/login')
 
-# =========================
 # LOGIN PAGE
-# =========================
+
 @app.route('/login', methods=['GET', 'POST'])
 def login():
 
@@ -55,9 +54,8 @@ def login():
         message=message
     )
 
-# =========================
 # REGISTER PAGE
-# =========================
+
 @app.route('/register', methods=['GET', 'POST'])
 def register():
 
@@ -99,9 +97,9 @@ def register():
         message=message
     )
 
-# =========================
+
 # FORGOT PASSWORD
-# =========================
+
 @app.route('/forgot_password', methods=['GET', 'POST'])
 def forgot_password():
 
@@ -133,9 +131,8 @@ def forgot_password():
         message=message
     )
 
-# =========================
 # DASHBOARD
-# =========================
+
 @app.route('/dashboard')
 def dashboard():
 
@@ -343,25 +340,23 @@ def payment():
         total=total
     )
 
-# =========================
 # PLACE ORDER
-# =========================
 @app.route('/place_order')
 def place_order():
 
     return redirect('/payment')
 
-# =========================
+
 # SUCCESS PAGE
-# =========================
+
 @app.route('/success')
 def success():
 
     return render_template('success.html')
 
-# =========================
+
 # LOGOUT
-# =========================
+
 @app.route('/logout')
 def logout():
 

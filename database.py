@@ -1,15 +1,14 @@
 import sqlite3
 
-# =========================
+
 # CONNECT DATABASE
-# =========================
+
 conn = sqlite3.connect('food_ordering.db')
 
 cursor = conn.cursor()
 
-# =========================
 # CUSTOMERS TABLE
-# =========================
+
 cursor.execute("""
 CREATE TABLE IF NOT EXISTS Customers (
 
@@ -27,9 +26,9 @@ CREATE TABLE IF NOT EXISTS Customers (
 )
 """)
 
-# =========================
+
 # RESTAURANTS TABLE
-# =========================
+
 cursor.execute("""
 CREATE TABLE IF NOT EXISTS Restaurants (
 
@@ -43,9 +42,7 @@ CREATE TABLE IF NOT EXISTS Restaurants (
 )
 """)
 
-# =========================
 # FOOD ITEMS TABLE
-# =========================
 cursor.execute("""
 CREATE TABLE IF NOT EXISTS FoodItems (
 
@@ -61,9 +58,8 @@ CREATE TABLE IF NOT EXISTS FoodItems (
 )
 """)
 
-# =========================
+
 # ORDERS TABLE
-# =========================
 cursor.execute("""
 CREATE TABLE IF NOT EXISTS Orders (
 
@@ -77,15 +73,13 @@ CREATE TABLE IF NOT EXISTS Orders (
 )
 """)
 
-# =========================
+
 # DELETE OLD DATA
-# =========================
 cursor.execute("DELETE FROM Restaurants")
 cursor.execute("DELETE FROM FoodItems")
 
-# =========================
+
 # INSERT RESTAURANTS
-# =========================
 restaurants = [
 
     ('Pizza Palace', 'Mangalore', '9876543210'),
@@ -113,9 +107,9 @@ INSERT INTO Restaurants
 VALUES (?, ?, ?)
 """, restaurants)
 
-# =========================
+
 # INSERT FOOD ITEMS
-# =========================
+
 food_items = [
 
     # PIZZA PALACE
@@ -191,9 +185,9 @@ INSERT INTO FoodItems
 VALUES (?, ?, ?, ?)
 """, food_items)
 
-# =========================
+
 # SAVE DATABASE
-# =========================
+
 conn.commit()
 
 conn.close()
